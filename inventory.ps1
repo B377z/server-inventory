@@ -6,6 +6,6 @@ $ComputerSystem = Get-CimInstance -ClassName Win32_ComputerSystem
     OperatingSystem   = $OperatingSystem.Caption
     Version           = $OperatingSystem.Version
     LogicalProcessors = $ComputerSystem.NumberOfLogicalProcessors
-    MemoryGB          = [math]::Round($ComputerSystem.TotalPhysicalMemory / 1GB, 2)
+    TotalMemoryGB          = [math]::Round($ComputerSystem.TotalPhysicalMemory / 1GB, 2)
     LastBootUpTime    = $OperatingSystem.LastBootUpTime
 }
